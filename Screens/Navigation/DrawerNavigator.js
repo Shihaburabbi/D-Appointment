@@ -16,9 +16,10 @@ const DrawerNavigator = () => {
         <Drawer.Navigator>
             {/* <Drawer.Screen name="Home" component={TabNavigator} /> */}
             {/* <Drawer.Screen name="Contact" component={ContactStackNavigator} /> */}
+            <Drawer.Screen name="Contact" component={Contact} />
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="About" component={About} />
-            <Drawer.Screen name="Contact" component={Contact} />
+            
         </Drawer.Navigator>
     );
 }

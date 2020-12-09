@@ -27,6 +27,7 @@ export const THEME = {
   LIGHT_SUCCESS: '#88F38E',
   BRIGHT_SUCCESS: '#D2FBD3',
   WHITE: '#FFFFFF',
+  WHITE_DARK: '#f6f6f6',
   DARK_BLACK: '#000B19',
   BLACK: '#161D28',
   BRIGHT_BLACK: '#3D4144',
@@ -38,7 +39,9 @@ export const THEME = {
   DARK_GREY: '#E0E4EA',
   GREY: '#E9EBEF',
   BRIGHT_GREY: '#F7F8F9',
+  HEADER: '#115173',
   LIGHT_GREY: '#F0F1F4',
+  SEARCH_FONT:'#ABABAB',
   NEUTRAL: 'rgba(255,255,255, 0.65)',
 };
 

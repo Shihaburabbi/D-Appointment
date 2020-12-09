@@ -1,48 +1,52 @@
 import React from "react";
-import { View, StyleSheet, Text,  } from "react-native";
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { Accordion, Block, NavBar, Button, } from 'galio-framework';
+import { View, StyleSheet, Button } from "react-native";
+import { Accordion, Block, NavBar, Text, Input, Card, Icon } from 'galio-framework';
+import { Notification, SearchIcon } from './theme/SvgIcon'
 import theme from './theme'
+import COLORS from "./theme/colors";
 
-const data = [
-    {
-        title: "First Chapter", content: "Lorem ipsum dolor sit amet",
-        icon: {
-            name: 'keyboard-arrow-up',
-            family: 'material',
-            size: 16,
-        }
-    },
-    { title: "2nd Chapter", content: "Lorem ipsum dolor sit amet" },
-    { title: "3rd Chapter", content: "Lorem ipsum dolor sit amet" }
-];
 
-const Contact = (navigation) => {
+
+const Contact = ({ navigation }) => {
     return (
-        
+
         <View style={styles.center}>
             <NavBar
-                style={styles.navbar}
-                // right={this.renderRight()}
-                title="ddfds"
+                style={{ backgroundColor: theme.COLORS.HEADER }}
+                title=""
                 leftIconSize={theme.SIZES.ICON_MEDIUM}
                 leftIconName="navicon"
-                leftHitSlop={{ top: 30, bottom: 30, left: 30, right: 30 }}
-                leftStyle={{ paddingVertical: -12, flex: 0.3 }}
                 leftIconColor={theme.COLORS.BRIGHT_DANGER}
-                titleStyle={styles.title}
-                //  onLeftPress={this.handleLeftPress}
-                // onLeftPress={() => navigation.openDrawerNavigator()}
-                // onLeftPress={"DrawerNavigator"}
-                // onLeftPress={navigation.navigate("DrawerNavigator")}
-/>
-            {/* <Button
-                onPress={() => navigation.navigate('Home')}
-                title="Go to notifications"
-            /> */}
-            <Block style={{ height: 200 }}>
-                <Accordion dataArray={data} />
+                onLeftPress={() => navigation.openDrawer()}
+                right={(
+                    <Notification />
+                )}
+            />
+
+
+            <Block style={styles.MainBlock}>
+
+                <View style={{ margin: 15 }}>
+                    <Text h4 style={{ color: COLORS.DARK_BLACK }}>Hi, Olivia</Text>
+                    <Text h3>Welcome Back</Text>
+                </View>
+
+                <View>
+
+                    <Input
+                        style={styles.searchBar}
+                        borderless
+                        placeholder="Search..."
+                        placeholderTextColor={theme.COLORS.SEARCH_FONT}
+                        family="antdesign"
+                    />
+
+                    <SearchIcon style={{top:10}}/>
+                </View>
+
+
             </Block>
+
         </View>
     );
 };
@@ -50,8 +54,21 @@ const Contact = (navigation) => {
 const styles = StyleSheet.create({
     center: {
         flex: 1,
-       
+        backgroundColor: theme.COLORS.HEADER,
     },
+    MainBlock: {
+        backgroundColor: theme.COLORS.WHITE_DARK,
+        // height: '90%',
+        flex: 1,
+        // justifyContent: 'flex-end',
+        borderTopRightRadius: 20,
+        borderTopLeftRadius: 20
+    },
+    searchBar: {
+        height: 50,
+        width: '90%',
+        alignSelf: 'center'
+    }
 });
 
 export default Contact;

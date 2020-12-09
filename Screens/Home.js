@@ -15,7 +15,10 @@ const Home = ({ navigation }) => {
 
             <Container>
 
-                
+                <Button
+                    title="Go to About Screen"
+                    onPress={() => navigation.navigate("About")} // We added an onPress event which would navigate to the About screen
+                />
 
             </Container>
         </MainContainer>

@@ -29,16 +29,17 @@ const MainStackNavigator = () => {
         >
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="About" component={About} />
-        </Stack.Navigator>
-    );
-}
-
-const ContactStackNavigator = () => {
-    return (
-        <Stack.Navigator screenOptions={screenOptionStyle, {headerShown: false,}}>
             <Stack.Screen name="Contact" component={Contact} />
         </Stack.Navigator>
     );
 }
 
-export { MainStackNavigator, ContactStackNavigator };
+// const ContactStackNavigator = () => {
+//     return (
+//         <Stack.Navigator screenOptions={screenOptionStyle, {headerShown: false,}}>
+//             <Stack.Screen name="Contact" component={Contact} />
+//         </Stack.Navigator>
+//     );
+// }
+
+export { MainStackNavigator };

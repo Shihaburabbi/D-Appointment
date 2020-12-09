@@ -42,6 +42,8 @@ export const THEME = {
   HEADER: '#115173',
   LIGHT_GREY: '#F0F1F4',
   SEARCH_FONT:'#ABABAB',
+  MAIN_FONT:'#363636',
+  SEE_ALL_FONT:'#5e5d5d',
   NEUTRAL: 'rgba(255,255,255, 0.65)',
 };
 
